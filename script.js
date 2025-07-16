@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// Animate Hero Section Text
+
 gsap.from(".hero-left h1", {
   duration: 1.6,
   y: -40,
@@ -24,7 +24,6 @@ gsap.from(".btn", {
   ease: "back.out(1.7)"
 });
 
-// Animate Hero Visual Block
 gsap.from(".hero-right", {
   duration: 1.5,
   x: 100,
@@ -33,7 +32,6 @@ gsap.from(".hero-right", {
   ease: "power3.out"
 });
 
-// Animate sections on scroll
 document.querySelectorAll(".section").forEach(section => {
   gsap.from(section, {
     scrollTrigger: {
