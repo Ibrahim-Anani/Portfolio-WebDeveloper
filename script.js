@@ -45,3 +45,52 @@ document.querySelectorAll(".section").forEach(section => {
   });
 });
 
+function randMinMax(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+const canvas = document.getElementById("bgCanvas");
+const ctx = canvas.getContext("2d");
+let W, H;
+
+function resizeCanvas() {
+  W = canvas.width = canvas.offsetWidth;
+  H = canvas.height = canvas.offsetHeight;
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+let objects = [];
+
+for (let i = 0; i < 50; i++) {
+  objects.push({
+    x: randMinMax(0, W),
+    y: randMinMax(0, H),
+    width: randMinMax(8, 16),
+    height: randMinMax(8, 16),
+    vx: randMinMax(-0.3, 0.3),
+    vy: randMinMax(-0.3, 0.3)
+  });
+}
+
+function loop() {
+  ctx.clearRect(0, 0, W, H);
+
+  for (let obj of objects) {
+    obj.x += obj.vx;
+    obj.y += obj.vy;
+
+    // Bounce on edges
+    if (obj.x < 0 || obj.x + obj.width > W) obj.vx *= -1;
+    if (obj.y < 0 || obj.y + obj.height > H) obj.vy *= -1;
+
+    // Draw object
+    ctx.fillStyle = 'rgba(0, 255, 200, 0.15)';
+    ctx.fillRect(obj.x, obj.y, obj.width, obj.height);
+  }
+
+  requestAnimationFrame(loop);
+}
+
+loop();
