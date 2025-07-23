@@ -106,7 +106,9 @@ document.querySelector(".hero-left").addEventListener("mousemove", (e) => {
   glow.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 255, 200, 0.08) 0%, transparent 60%)`;});
 
 
-const container = document.querySelector(".parallax-container");
+
+
+const container = document.querySelector(".hero-name-wrapper");
 const layers = container.querySelectorAll(".layer");
 
 container.addEventListener("mousemove", (e) => {
@@ -115,7 +117,7 @@ container.addEventListener("mousemove", (e) => {
   const y = e.clientY - rect.top - rect.height / 2;
 
   layers.forEach((layer, i) => {
-    const depth = (i + 1) * 5;
+    const depth = (i + 1) * 2;
     const moveX = (x / rect.width) * depth;
     const moveY = (y / rect.height) * depth;
     layer.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
@@ -127,4 +129,3 @@ container.addEventListener("mouseleave", () => {
     layer.style.transform = `translate3d(0, 0, 0)`;
   });
 });
-
