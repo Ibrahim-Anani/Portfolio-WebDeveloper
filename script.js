@@ -104,3 +104,27 @@ document.querySelector(".hero-left").addEventListener("mousemove", (e) => {
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
   glow.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 255, 200, 0.08) 0%, transparent 60%)`;});
+
+
+const container = document.querySelector(".parallax-container");
+const layers = container.querySelectorAll(".layer");
+
+container.addEventListener("mousemove", (e) => {
+  const rect = container.getBoundingClientRect();
+  const x = e.clientX - rect.left - rect.width / 2;
+  const y = e.clientY - rect.top - rect.height / 2;
+
+  layers.forEach((layer, i) => {
+    const depth = (i + 1) * 5;
+    const moveX = (x / rect.width) * depth;
+    const moveY = (y / rect.height) * depth;
+    layer.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
+  });
+});
+
+container.addEventListener("mouseleave", () => {
+  layers.forEach(layer => {
+    layer.style.transform = `translate3d(0, 0, 0)`;
+  });
+});
+
