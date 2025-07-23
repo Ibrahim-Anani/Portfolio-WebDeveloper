@@ -81,11 +81,11 @@ function loop() {
     obj.x += obj.vx;
     obj.y += obj.vy;
 
-    // Bounce on edges
+    
     if (obj.x < 0 || obj.x + obj.width > W) obj.vx *= -1;
     if (obj.y < 0 || obj.y + obj.height > H) obj.vy *= -1;
 
-    // Draw object
+    
     ctx.fillStyle = 'rgba(0, 255, 200, 0.15)';
     ctx.fillRect(obj.x, obj.y, obj.width, obj.height);
   }
@@ -94,3 +94,13 @@ function loop() {
 }
 
 loop();
+
+const glow = document.createElement("div");
+glow.id = "mouseGlow";
+document.querySelector(".hero-left").appendChild(glow);
+
+document.querySelector(".hero-left").addEventListener("mousemove", (e) => {
+  const rect = e.currentTarget.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  glow.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 255, 200, 0.08) 0%, transparent 60%)`;});
