@@ -365,3 +365,29 @@ footer {
     transform: rotateY(360deg) rotateX(360deg);
   }
 }
+
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+  padding: 0 3vw;
+}
+
+.hero-left, .hero-right {
+  max-width: 500px; /* or whatever fits your layout */
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero-left, .hero-right {
+    max-width: 100%;
+    text-align: center;
+  }
+}
