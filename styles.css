@@ -349,13 +349,13 @@ footer {
 }
 
 /* Position icons in a fake 3D sphere */
-.tech-cloud img:nth-child(1) { transform: rotateY(0deg) translateZ(80px); }
-.tech-cloud img:nth-child(2) { transform: rotateY(60deg) translateZ(80px); }
-.tech-cloud img:nth-child(3) { transform: rotateY(120deg) translateZ(80px); }
-.tech-cloud img:nth-child(4) { transform: rotateY(180deg) translateZ(80px); }
-.tech-cloud img:nth-child(5) { transform: rotateY(240deg) translateZ(80px); }
-.tech-cloud img:nth-child(6) { transform: rotateY(300deg) translateZ(80px); }
-.tech-cloud img:nth-child(7) { transform: rotateX(90deg) translateZ(80px); }
+.tech-cloud img:nth-child(1) { transform: rotateY(0deg) translateZ(100px); }
+.tech-cloud img:nth-child(2) { transform: rotateY(60deg) translateZ(100px); }
+.tech-cloud img:nth-child(3) { transform: rotateY(120deg) translateZ(100px); }
+.tech-cloud img:nth-child(4) { transform: rotateY(180deg) translateZ(100px); }
+.tech-cloud img:nth-child(5) { transform: rotateY(240deg) translateZ(100px); }
+.tech-cloud img:nth-child(6) { transform: rotateY(300deg) translateZ(100px); }
+.tech-cloud img:nth-child(7) { transform: rotateX(90deg) translateZ(100px); }
 
 @keyframes rotate3D {
   from {
