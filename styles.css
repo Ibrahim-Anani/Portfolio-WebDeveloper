@@ -321,4 +321,47 @@ footer {
   z-index: 1;
   overflow: hidden;
 }
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
+.tech-cloud {
+  width: 280px;
+  height: 280px;
+  position: relative;
+  animation: rotate3D 15s infinite linear;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+.tech-cloud img {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  transition: transform 0.3s ease;
+}
+
+/* Position icons in a fake 3D sphere */
+.tech-cloud img:nth-child(1) { transform: rotateY(0deg) translateZ(80px); }
+.tech-cloud img:nth-child(2) { transform: rotateY(60deg) translateZ(80px); }
+.tech-cloud img:nth-child(3) { transform: rotateY(120deg) translateZ(80px); }
+.tech-cloud img:nth-child(4) { transform: rotateY(180deg) translateZ(80px); }
+.tech-cloud img:nth-child(5) { transform: rotateY(240deg) translateZ(80px); }
+.tech-cloud img:nth-child(6) { transform: rotateY(300deg) translateZ(80px); }
+.tech-cloud img:nth-child(7) { transform: rotateX(90deg) translateZ(80px); }
+
+@keyframes rotate3D {
+  from {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
