@@ -53,3 +53,15 @@ window.addEventListener("scroll", () => {
   const progress = (scrollTop / docHeight) * 100;
   scrollProgress.style.width = `${progress}%`;
 });
+
+// Back to Top Button
+const topBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+
+topBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
