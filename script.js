@@ -44,3 +44,12 @@ const observer = new IntersectionObserver((entries) => {
   });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+
+window.addEventListener("scroll", () => {
+  const scrollProgress = document.getElementById("scrollProgress");
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  scrollProgress.style.width = `${progress}%`;
+});
