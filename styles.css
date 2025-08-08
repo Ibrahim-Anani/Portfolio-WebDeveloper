@@ -409,29 +409,22 @@ html {
   scroll-padding-top: 80px; 
 }
 
-#backToTop {
+#scrollTopBtn {
   position: fixed;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 999;
-  background-color: transparent;
-  color: #0a0a23;
+  background: none;
   border: none;
-  font-size: 32px;
   cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
+  color: #333;
+  padding: 10px;
+  z-index: 999;
   transition: opacity 0.3s ease;
 }
 
-#backToTop:hover {
-  color: #1a1a4b;
-  transform: translateX(-50%) scale(1.2);
+#scrollTopBtn:hover {
+  color: #000;
 }
 
-#backToTop.show {
-  opacity: 1;
-  visibility: visible;
-}
 
