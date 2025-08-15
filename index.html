@@ -137,11 +137,7 @@
 
   <div id="scrollProgress" style="position: fixed; top: 0; left: 0; height: 4px; background: #00ffc8; width: 0%; z-index: 1000;"></div>
 
-  <button id="scrollTopBtn" aria-label="Scroll to top">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-    <path d="M12 4L6 10H10V20H14V10H18L12 4Z" fill="currentColor"/>
-  </svg>
-</button>
+  
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
@@ -153,6 +149,13 @@
   });
 </script>
 
+<button id="themeToggle">🌙</button>
+<script>
+  const toggle = document.getElementById('themeToggle');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
   
 
 

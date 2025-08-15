@@ -409,22 +409,9 @@ html {
   scroll-padding-top: 80px; 
 }
 
-#scrollTopBtn {
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #333;
-  padding: 10px;
-  z-index: 999;
-  transition: opacity 0.3s ease;
+
+
+.dark-mode {
+  background: #121212;
+  color: #fff;
 }
-
-#scrollTopBtn:hover {
-  color: #000;
-}
-
-
