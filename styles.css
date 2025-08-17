@@ -413,4 +413,8 @@ html {
   font-size: 1.5rem; /* make it smaller */
 }
 
-
+.hero-right {
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease;
+  display: inline-block;
+}

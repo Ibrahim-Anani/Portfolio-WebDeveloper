@@ -91,3 +91,16 @@ document.getElementById("scrollTopBtn").addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+const heroRight = document.querySelector(".hero-right");
+
+document.addEventListener("mousemove", (e) => {
+  let x = (e.clientX / window.innerWidth - 0.5) * 30; // rotate left/right
+  let y = (e.clientY / window.innerHeight - 0.5) * 30; // rotate up/down
+
+  heroRight.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+});
+
+document.addEventListener("mouseleave", () => {
+  heroRight.style.transform = `rotateY(0deg) rotateX(0deg)`;
+});
