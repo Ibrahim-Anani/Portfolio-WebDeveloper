@@ -376,7 +376,7 @@ footer {
 }
 
 .hero-left, .hero-right {
-  max-width: 500px; /* or whatever fits your layout */
+  max-width: 500px; 
   flex: 1;
 }
 
@@ -409,7 +409,8 @@ html {
   scroll-padding-top: 80px; 
 }
 
-
-
+.typed-text {
+  font-size: 1.5rem; /* make it smaller */
+}
 
 
