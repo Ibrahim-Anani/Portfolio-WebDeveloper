@@ -418,3 +418,51 @@ html {
   transition: transform 0.1s ease;
   display: inline-block;
 }
+
+
+#contact {
+  text-align: center;
+  padding: 80px 20px;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.form-group {
+  position: relative;
+  margin: 20px 0;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #aaa;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-color);
+  outline: none;
+}
+
+.form-group label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: #aaa;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+  top: -12px;
+  left: 8px;
+  font-size: 12px;
+  color: #00bcd4;
+}
