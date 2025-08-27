@@ -18,7 +18,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header */
 header {
   background: #121026;
   padding: 15px 40px;
@@ -259,5 +258,7 @@ html {
   h1 { font-size: 2.4rem; }
   .btn { padding: 12px 28px; }
 }
+
+
 
 

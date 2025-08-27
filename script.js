@@ -21,19 +21,19 @@ gsap.from(".btn", { scale: 0.8, opacity: 0, duration: 0.6, delay: 0.6, ease: "ba
 //   vy: Math.random() * 0.5 - 0.25
 // }));
 
-function draw() {
-  ctx.clearRect(0, 0, W, H);
-  boxes.forEach(b => {
-    b.x += b.vx;
-    b.y += b.vy;
-    if (b.x < 0 || b.x > W) b.vx *= -1;
-    if (b.y < 0 || b.y > H) b.vy *= -1;
-    ctx.fillStyle = 'rgba(0,255,200,0.1)';
-    ctx.fillRect(b.x, b.y, b.size, b.size);
-  });
-  requestAnimationFrame(draw);
-}
-draw();
+// function draw() {
+//   ctx.clearRect(0, 0, W, H);
+//   boxes.forEach(b => {
+//     b.x += b.vx;
+//     b.y += b.vy;
+//     if (b.x < 0 || b.x > W) b.vx *= -1;
+//     if (b.y < 0 || b.y > H) b.vy *= -1;
+//     ctx.fillStyle = 'rgba(0,255,200,0.1)';
+//     ctx.fillRect(b.x, b.y, b.size, b.size);
+//   });
+//   requestAnimationFrame(draw);
+// }
+// draw();
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
