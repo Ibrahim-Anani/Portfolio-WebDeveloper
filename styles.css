@@ -262,3 +262,16 @@ html {
 
 
 
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  padding: 0 50px;
+}
+
+/* About Section */
+#about {
+  padding: 100px 50px; /* add spacing above About */
+}
