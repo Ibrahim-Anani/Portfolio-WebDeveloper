@@ -66,3 +66,14 @@ document.addEventListener("mouseleave", () => {
   heroRight.style.transform = `rotateY(0deg) rotateX(0deg)`;
 });
 
+gsap.to(".tech-cloud img", {
+  y: 20,
+  repeat: -1,
+  yoyo: true,
+  duration: 2,
+  ease: "sine.inOut",
+  stagger: {
+    amount: 2,
+    from: "random"
+  }
+});
