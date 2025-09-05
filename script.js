@@ -56,8 +56,8 @@ window.addEventListener('scroll', () => {
 const heroRight = document.querySelector(".hero-right");
 
 document.addEventListener("mousemove", (e) => {
-  let x = (e.clientX / window.innerWidth - 0.5) * 30; // rotate left/right
-  let y = (e.clientY / window.innerHeight - 0.5) * 30; // rotate up/down
+  let x = (e.clientX / window.innerWidth - 0.5) * 30; 
+  let y = (e.clientY / window.innerHeight - 0.5) * 30; 
 
   heroRight.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
 });
@@ -66,42 +66,3 @@ document.addEventListener("mouseleave", () => {
   heroRight.style.transform = `rotateY(0deg) rotateX(0deg)`;
 });
 
-// Register GSAP plugins
-gsap.registerPlugin(ScrollTrigger);
-
-// Hero text animation
-gsap.from(".hero-left h1 span, .hero-left p, .btn", {
-  y: 50,
-  opacity: 0,
-  duration: 1,
-  stagger: 0.3,
-  ease: "power3.out"
-});
-
-// Floating icons (hero right)
-gsap.to(".tech-cloud img", {
-  y: 20,
-  repeat: -1,
-  yoyo: true,
-  duration: 2,
-  ease: "sine.inOut",
-  stagger: {
-    amount: 2,
-    from: "random"
-  }
-});
-
-// Scroll reveal for sections
-gsap.utils.toArray("section").forEach((sec) => {
-  gsap.from(sec, {
-    scrollTrigger: {
-      trigger: sec,
-      start: "top 80%",
-      toggleActions: "play none none reverse"
-    },
-    y: 60,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out"
-  });
-});
