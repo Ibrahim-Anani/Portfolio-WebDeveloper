@@ -65,3 +65,43 @@ document.addEventListener("mousemove", (e) => {
 document.addEventListener("mouseleave", () => {
   heroRight.style.transform = `rotateY(0deg) rotateX(0deg)`;
 });
+
+// Register GSAP plugins
+gsap.registerPlugin(ScrollTrigger);
+
+// Hero text animation
+gsap.from(".hero-left h1 span, .hero-left p, .btn", {
+  y: 50,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.3,
+  ease: "power3.out"
+});
+
+// Floating icons (hero right)
+gsap.to(".tech-cloud img", {
+  y: 20,
+  repeat: -1,
+  yoyo: true,
+  duration: 2,
+  ease: "sine.inOut",
+  stagger: {
+    amount: 2,
+    from: "random"
+  }
+});
+
+// Scroll reveal for sections
+gsap.utils.toArray("section").forEach((sec) => {
+  gsap.from(sec, {
+    scrollTrigger: {
+      trigger: sec,
+      start: "top 80%",
+      toggleActions: "play none none reverse"
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+});
