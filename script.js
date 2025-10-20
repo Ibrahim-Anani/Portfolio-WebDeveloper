@@ -77,3 +77,12 @@ gsap.to(".tech-cloud img", {
     from: "random"
   }
 });
+
+gsap.to(".hero-right img", {
+  y: 15,
+  repeat: -1,
+  yoyo: true,
+  ease: "sine.inOut",
+  duration: 2,
+  stagger: 0.4
+});
