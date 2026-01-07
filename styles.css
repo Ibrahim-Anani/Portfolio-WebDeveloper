@@ -5,8 +5,8 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- background: #22C1C3;
-background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+ background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #f0f0f0;
 }
 
 a {
